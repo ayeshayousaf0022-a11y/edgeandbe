@@ -1,0 +1,292 @@
+static-site/index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Edge & Beyond — handcrafted luxury leather handbags from full-grain Italian hides. Made in small batches, kept for a lifetime." />
+  <meta name="theme-color" content="#f6efe4" />
+  <meta property="og:title" content="Edge & Beyond — Handcrafted Leather Handbags" />
+  <meta property="og:description" content="Timeless leather handbags, made in small batches from full-grain Italian hides." />
+  <meta property="og:type" content="website" />
+  <title>Edge & Beyond — Handcrafted Luxury Leather Handbags</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <!-- Announcement -->
+  <div class="announcement" role="region" aria-label="Site announcement">
+    Free UK &amp; EU shipping on orders over £400 — Lifetime repair on every bag
+  </div>
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand" aria-label="Edge and Beyond home">EDGE &amp; BEYOND</a>
+      <nav class="primary-nav" aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-list" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#categories">Collections</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" id="searchBtn" aria-label="Search">🔍</button>
+        <a href="#wishlist" class="icon-btn" aria-label="Wishlist">♡</a>
+        <a href="#cart" class="icon-btn cart-btn" aria-label="Cart">
+          🛍 <span class="cart-count" id="cartCount">0</span>
+        </a>
+      </div>
+    </div>
+    <div id="searchBar" class="search-bar" hidden>
+      <div class="container">
+        <label for="searchInput" class="visually-hidden">Search products</label>
+        <input id="searchInput" type="search" placeholder="Search bags, collections…" />
+      </div>
+    </div>
+  </header>
+  <main id="main">
+    <!-- Hero -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Autumn Edition — Vol. 07</p>
+          <h1 id="hero-title">The quiet weight of <em>everyday</em> leather.</h1>
+          <p class="lede">
+            Handbags cut from full-grain Italian hides, finished by hand in small
+            ateliers. Built to soften with your years — not against them.
+          </p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#shop">Shop the edition</a>
+            <a class="btn btn-link" href="#about">Our craft →</a>
+          </div>
+        </div>
+        <figure class="hero-image">
+          <img src="assets/duffel-bag.jpg" alt="Cognac full-grain leather duffel bag on a stone pedestal" width="800" height="1000" />
+          <figcaption>
+            <span class="eyebrow">Featured</span>
+            <strong>The Foundation Duffel</strong>
+            <span>Cognac full-grain — £890</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+    <!-- Marquee / value props -->
+    <section class="marquee" aria-label="Brand promises">
+      <div class="container marquee-inner">
+        <span>Free UK &amp; EU shipping over £400</span>
+        <span>Lifetime repair</span>
+        <span>Ethically sourced hides</span>
+        <span>Small-batch atelier</span>
+      </div>
+    </section>
+    <!-- Categories -->
+    <section id="categories" class="section" aria-labelledby="cat-title">
+      <div class="container">
+        <p class="eyebrow">By Collection</p>
+        <h2 id="cat-title">Shop the shapes.</h2>
+<ul class="category-grid">
+          <li><a href="#shop"><img src="assets/duffel-bag.jpg" alt="Duffel bags collection" /><span>Duffels</span></a></li>
+          <li><a href="#shop"><img src="assets/bag-1.jpg" alt="Totes collection" /><span>Totes</span></a></li>
+          <li><a href="#shop"><img src="assets/bag-2.jpg" alt="Mini and crossbody collection" /><span>Mini &amp; Crossbody</span></a></li>
+          <li><a href="#shop"><img src="assets/bag-3.jpg" alt="Bucket bags collection" /><span>Bucket</span></a></li>
+          <li><a href="#shop"><img src="assets/bag-4.jpg" alt="Hobo bags collection" /><span>Hobo</span></a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- Product gallery / Shop -->
+    <section id="shop" class="section section-alt" aria-labelledby="shop-title">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">The Collection</p>
+            <h2 id="shop-title">Five silhouettes. Endless days.</h2>
+          </div>
+        </div>
+        <ul id="productGrid" class="product-grid"></ul>
+      </div>
+    </section>
+    <!-- About -->
+    <section id="about" class="section about" aria-labelledby="about-title">
+      <div class="container about-grid">
+        <img src="assets/craft.jpg" alt="Artisan hand-stitching a leather bag in a Florentine workshop" />
+        <div>
+          <p class="eyebrow">The Craft</p>
+          <h2 id="about-title">Forty-two hours, one pair of hands.</h2>
+          <p>
+            Every Edge &amp; Beyond piece is cut, saddle-stitched and burnished by a
+            single artisan in a Florentine workshop we've partnered with for over a
+            decade. Our leathers are vegetable-tanned in Tuscany and finished with
+            solid brass hardware — nothing plated, nothing rushed.
+          </p>
+          <dl class="stats">
+            <div><dt>42h</dt><dd>Per bag</dd></div>
+            <div><dt>1</dt><dd>Artisan, start to finish</dd></div>
+            <div><dt>12</dt><dd>Years in Florence</dd></div>
+            <div><dt>∞</dt><dd>Lifetime repair</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+    <!-- Reviews -->
+    <section id="reviews" class="section section-alt" aria-labelledby="rev-title">
+      <div class="container">
+        <p class="eyebrow">Kept &amp; Loved</p>
+        <h2 id="rev-title">What owners say.</h2>
+        <ul class="reviews">
+          <li>
+            <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+            <blockquote>"Three years in and it still looks better every month. The patina is unreal."</blockquote>
+            <cite>— Amara S., London</cite>
+          </li>
+          <li>
+            <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+            <blockquote>"The stitching is flawless. It's the only bag I reach for now."</blockquote>
+            <cite>— Julien D., Paris</cite>
+          </li>
+          <li>
+            <p class="stars" aria-label="5 out of 5 stars">★★★★★</p>
+            <blockquote>"Worth every pound. It feels heirloom, not seasonal."</blockquote>
+            <cite>— Priya K., Manchester</cite>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <!-- FAQ -->
+    <section id="faq" class="section" aria-labelledby="faq-title">
+      <div class="container faq-wrap">
+        <p class="eyebrow">Answered</p>
+        <h2 id="faq-title">Frequently asked.</h2>
+        <div class="faq">
+          <details>
+            <summary>Where are your bags made?</summary>
+            <p>In a small family atelier in Florence, Italy. Each bag is completed by a single artisan from cut to finish.</p>
+          </details>
+          <details>
+            <summary>What leather do you use?</summary>
+            <p>Full-grain, vegetable-tanned Italian leather sourced from certified Tuscan tanneries.</p>
+          </details>
+          <details>
+            <summary>Do you ship internationally?</summary>
+            <p>Yes — UK &amp; EU shipping is free over £400. We ship worldwide with fully tracked, insured couriers.</p>
+          </details>
+          <details>
+            <summary>What is your return policy?</summary>
+            <p>Unused bags may be returned within 30 days for a full refund. Custom orders are final sale.</p>
+          </details>
+          <details>
+            <summary>Do you offer repairs?</summary>
+            <p>Every Edge &amp; Beyond bag comes with a lifetime repair promise. Get in touch and we'll take care of it.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+<!-- Contact -->
+    <section id="contact" class="section section-alt" aria-labelledby="contact-title">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Say Hello</p>
+          <h2 id="contact-title">We'd love to hear from you.</h2>
+          <p>Questions about a bag, a custom order, or a repair? Send us a note and we'll reply within one business day.</p>
+          <address>
+            Edge &amp; Beyond Atelier<br />
+            12 Via dei Fossi, Firenze, Italy<br />
+            <a href="mailto:hello@edgeandbeyond.co">hello@edgeandbeyond.co</a>
+          </address>
+        </div>
+        <form id="contactForm" class="contact-form" novalidate>
+          <div class="field">
+            <label for="cName">Name</label>
+            <input id="cName" name="name" type="text" required autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="cEmail">Email</label>
+            <input id="cEmail" name="email" type="email" required autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="cMessage">Message</label>
+            <textarea id="cMessage" name="message" rows="5" required></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send message</button>
+          <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+    <!-- Newsletter -->
+    <section class="newsletter" aria-labelledby="nl-title">
+      <div class="container">
+        <h2 id="nl-title">Notes from the atelier.</h2>
+        <p>Quiet updates on new editions and restocks. No noise.</p>
+        <form id="newsletterForm" class="newsletter-form">
+          <label for="nlEmail" class="visually-hidden">Email address</label>
+          <input id="nlEmail" type="email" required placeholder="your@email.com" />
+          <button class="btn btn-primary" type="submit">Subscribe</button>
+        </form>
+        <p id="nlStatus" class="form-status" role="status" aria-live="polite"></p>
+      </div>
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div>
+        <p class="brand">EDGE &amp; BEYOND</p>
+        <p class="muted">Handcrafted leather, made to be lived in.</p>
+      </div>
+      <nav aria-label="Shop">
+        <h3>Shop</h3>
+        <ul>
+          <li><a href="#shop">All bags</a></li>
+          <li><a href="#categories">Collections</a></li>
+          <li><a href="#shop">New arrivals</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Support">
+        <h3>Support</h3>
+        <ul>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#faq">Shipping &amp; returns</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Company">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Press</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-base">
+      <small>© <span id="year"></span> Edge &amp; Beyond. All rights reserved.</small>
+      <small><a href="#">Privacy</a> · <a href="#">Terms</a></small>
+    </div>
+  </footer>
+  <!-- Product Quick View Modal -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel">
+      <button class="modal-close" data-close aria-label="Close">×</button>
+      <img id="modalImg" src="" alt="" />
+      <div>
+        <p class="eyebrow" id="modalMaterial"></p>
+        <h3 id="modalTitle"></h3>
+        <p id="modalPrice" class="price"></p>
+        <p id="modalDesc"></p>
+        <button class="btn btn-primary" id="modalAdd">Add to cart</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+</html>
